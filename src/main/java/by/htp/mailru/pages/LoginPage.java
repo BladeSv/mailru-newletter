@@ -17,7 +17,7 @@ public class LoginPage {
 		 
 		 driver.get("https://account.mail.ru/login");
 	
-		 System.out.println(driver.getTitle());
+		
 		 
 	 }
 	 public  void Login(String login, String pass) {
@@ -28,7 +28,7 @@ public class LoginPage {
 		 passElement.sendKeys(pass);
 		 loginElement.submit();
 	 }
-	 
+
 	 
 	 
 }

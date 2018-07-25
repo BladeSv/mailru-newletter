@@ -2,6 +2,7 @@ package by.htp.mailru;
 
 import by.htp.mailru.driver.WorkDriver;
 import by.htp.mailru.pages.LoginPage;
+import by.htp.mailru.pages.MainMailPage;
 
 public class TestMailRuPages {
 
@@ -11,6 +12,9 @@ public class TestMailRuPages {
 	
 		loginPage.openPage();
 		loginPage.Login("tathtp", "Klopik123");
+		
+		MainMailPage mainMailPage =new MainMailPage(WorkDriver.getDriver());
+		mainMailPage.openPage();
 	}
 	
 	
