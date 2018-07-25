@@ -1,9 +1,10 @@
 package by.htp.mailru.driver;
 
-import java.sql.DriverManager;
+
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 
 public class WorkDriver {
 	private static WebDriver driver;
@@ -14,12 +15,12 @@ public class WorkDriver {
 	
 	private WorkDriver() {};
 	
-	public static WebDriver getDriver() {
+	public static WebDriver getDriver()  {
 		if(driver==null) {
-			System.getProperty(CHROME, CHROME_PATH);
-			WebDriver driver= new ChromeDriver();
+			System.setProperty(CHROME, CHROME_PATH);
+			 driver= new ChromeDriver();
 			driver.manage().window().maximize();
-						
+					
 		}
 			
 		
