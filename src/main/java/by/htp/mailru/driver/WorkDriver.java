@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class WorkDriver {
 	private static WebDriver driver;
 	private static final String CHROME = "webdriver.chrome.driver";
-	private static final String CHROME_PATH="c:\\Program Files\\Java\\chromedriver.exe";
+	private static final String CHROME_PATH="src\\main\\resources\\chromedriver\\chromedriver.exe";
 
 	
 	
