@@ -16,7 +16,7 @@ public class LoginPage {
 	 public void openPage() {
 		 
 		 driver.get("https://account.mail.ru/login");
-	
+
 		
 		 
 	 }
@@ -27,6 +27,7 @@ public class LoginPage {
 		 WebElement passElement =driver.findElement(By.name("Password"));	
 		 passElement.sendKeys(pass);
 		 loginElement.submit();
+		 
 	 }
 
 	 
