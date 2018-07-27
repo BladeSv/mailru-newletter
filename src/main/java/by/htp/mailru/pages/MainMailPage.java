@@ -34,16 +34,22 @@ public class MainMailPage {
 public void sendNewLetter(String adress, String theame, String messege) {
 	Set<String> element= driver.getWindowHandles();
 	element.forEach(k->System.out.println(k));
-	Actions action= new Actions(driver);
-	WebElement adressArea= driver.findElement(By.cssSelector("#toolkit-153260965304241composeForm > div:nth-child(1) > div > div.compose-head__content.js-collapsed-off > div.compose-head__row-wrapper.compose-head__row-wrapper_to.js-row > div > div > div:nth-child(2) > div > div > div > textarea.js-input.compose__labels__input"));
-	//action.moveToElement(adressArea).click().perform();
+	driver.switchTo().frame("toolkit-153269808315041composeEditor_tbl");
+
+	WebElement adressArea= driver.findElement(By.xpath("//div[@data-bem='compose-head']//textarea[@data-original-name='To']"));
+	adressArea.sendKeys(adress);
+WebElement theameArea = driver.findElement(By.xpath("//div[@data-bem='compose-head']//input[@data-bem='b-input']"));
+theameArea.sendKeys(theame);
+
+
+
+//WebElement messegeArea = driver.findElement(By.xpath("//body[@id='tinymce']"));
+	
+//messegeArea.sendKeys(messege);
+	
 	};
 	
-	
-	//driver.switchTo()
-//	WebElement element=driver.findElement(By.cssSelector("#toolkit-153260459968041composeForm > div:nth-child(1) > div > div.compose-head__content.js-collapsed-off > div.compose-head__row-wrapper.compose-head__row-wrapper_to.js-row > div > div > div:nth-child(2) > div > div > div > textarea.js-input.compose__labels__input"));
-//	element.sendKeys(adress);
-	
+	//*[@id="toolkit-153269894305341composeForm"]/div[1]/div/div[3]/div[4]/div/div/div[2]/div/input
 	
 	
 }

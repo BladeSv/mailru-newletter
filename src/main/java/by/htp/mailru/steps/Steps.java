@@ -19,7 +19,7 @@ public class Steps {
 		MainMailPage mailPage =new MainMailPage(WorkDriver.getDriver());
 		mailPage.openPage();
 		mailPage.createNewLetter();
-		mailPage.sendNewLetter("bladesvet@gmai.com", "Tema1", "Hello World");
+		mailPage.sendNewLetter("testselenium_mail@mail.ru", "a12345678", "Hello World");
 		
 		
 	}
